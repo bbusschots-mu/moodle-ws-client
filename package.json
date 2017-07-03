@@ -1,0 +1,35 @@
+{
+  "name": "@maynoothuniversity/moodle-ws-client",
+  "version": "0.0.1",
+  "description": "A Moodle Web Services Client",
+  "main": "lib/moodleWSClient.js",
+  "scripts": {
+    "test": "node_modules/qunitjs/bin/qunit test/test.js",
+    "generate-docs": "node_modules/.bin/jsdoc --configure jsdoc.conf.json",
+    "generate-docs-dev": "node_modules/.bin/jsdoc --configure jsdoc.conf.json --private --destination ./docs-dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbusschots-mu/moodle-ws-client.git"
+  },
+  "keywords": [
+    "Moodle",
+    "Web",
+    "Service",
+    "REST"
+  ],
+  "author": "Bart Busschots <bart.busschots@mu.ie>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bbusschots-mu/moodle-ws-client/issues"
+  },
+  "homepage": "https://github.com/bbusschots-mu/moodle-ws-client#readme",
+  "dependencies": {
+    "@maynoothuniversity/validate-params": "^0.1.1"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.4.3",
+    "minami": "^1.2.3",
+    "qunitjs": "^2.3.3"
+  }
+}

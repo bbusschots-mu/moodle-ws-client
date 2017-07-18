@@ -1,5 +1,8 @@
 # Dependency directories
 node_modules/
 
+# the developer docs
+docs-dev/
+
 # IDE Files
 *.komodoproject

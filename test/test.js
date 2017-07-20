@@ -7,6 +7,7 @@ const MoodleWSClient = require('../');
 
 // import validateParams for access to the error prototype
 const validateParams = require('@maynoothuniversity/validate-params');
+const validate = validateParams.validateJS();
 
 //
 //=== Utility Variables & Functions ============================================
@@ -157,7 +158,7 @@ QUnit.test('class exists', function(a){
     
     QUnit.module('constructor', {}, function(){
         QUnit.test('argument handling', function(a){
-            a.expect(6);
+            a.expect(7);
             
             // make sure required arguments are required
             a.throws(
@@ -185,13 +186,26 @@ QUnit.test('class exists', function(a){
             );
             
             // make sure arguments are properly saved into the constructed object
-            var m1 = new MoodleWSClient(dummyVal('url'), dummyVal('token'));
+            var dummyOptions = {
+                acceptUntrustedTLSCert: true,
+                dataFormat: 'xml'
+            };
+            var m1 = new MoodleWSClient(dummyVal('url'), dummyVal('token'), dummyOptions);
             a.equal(m1._baseURL, dummyVal('url'), 'Moodle base URL stored');
             a.equal(m1._token, dummyVal('token'), 'webservice token stored');
+            a.deepEqual(m1._options, dummyOptions, 'options stored');
             
             // check URL coercion
             var m2 = new MoodleWSClient('https://localhost', dummyVal('token'));
             a.equal(m2._baseURL,'https://localhost/', 'trailing / coerced onto Moodle base URL');
+        });
+        
+        QUnit.test('options defaults', function(a){
+            a.expect(3);
+            var m1 = new MoodleWSClient(dummyVal('url'), dummyVal('token'));
+            a.ok(validate.isObject(m1._options), 'options created as object');
+            a.strictEqual(m1._options.acceptUntrustedTLSCert, false, 'acceptUntrustedTLSCert defaults to false');
+            a.strictEqual(m1._options.dataFormat, 'json', "dataFormat defaults to 'json'");
         });
     });
 });

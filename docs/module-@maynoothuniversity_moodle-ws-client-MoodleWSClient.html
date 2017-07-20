@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html">MoodleWSClient</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client.html">@maynoothuniversity/moodle-ws-client</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html">MoodleWSClient</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#submit">submit</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client.html">@maynoothuniversity/moodle-ws-client</a></span></li><li class="nav-heading">Externals</li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-validateParams.html">validateParams</a></span></li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-ValidateParamsConstraints.html">ValidateParamsConstraints</a></span></li>
 </nav>
 
 <div id="main">
@@ -62,15 +62,11 @@
     <h2>Constructor</h2>
     
 
-    <h4 class="name" id="MoodleWSClient"><span class="icon type-function">F<small>c</small></span><span class="type-signature"></span>new MoodleWSClient<span class="signature">(moodleBaseURL, token)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="MoodleWSClient"><span class="icon type-function">F<small>c</small></span><span class="type-signature"></span>new MoodleWSClient<span class="signature">(moodleBaseURL, token, options<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
 
     
 
 
-
-<div class="description">
-    <p>Constructor Comment</p>
-</div>
 
 
 
@@ -139,6 +135,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -163,6 +161,14 @@
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -190,11 +196,172 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
             <td class="description last">
                 <p>the token to authenticate with.</p>
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>options</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Object</code></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">
+                
+                
+                    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>acceptUntrustedTLSCert</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>boolean</code></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last">
+                <p>whether or not
+to accept TLS certificates that don't pass validation. Unless your Moodle</p>
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dataFormat</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>WSDataFormat</code></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    'json'
+                
+                </td>
+            
+
+            <td class="description last">
+                <p>the format
+the Moodle Web Service should use when returning data. By default, the
+data is returned in JSON format.
+server uses a self-signed certificate, don't set this to <code>true</code>!</p>
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
                 
             </td>
         </tr>
@@ -235,6 +402,233 @@
     
 
     
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+<div class="section-method">
+
+    
+
+    <h4 class="name" id="submit"><span class="icon type-function">F</span><span class="type-signature"></span>submit<span class="signature">(method, wsFunctionName, wsParameters)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Function to execute a query against the Moodle API</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>method</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>HttpMethod</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>wsFunctionName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>WSFunctionName</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>wsParameters</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>PlainObject</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>a plain object containing the
+parameters to send to the web service. This object can be used to
+override the default data format via the <code>moodlewsrestformat</code> key.</p>
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-throws">
+<h5>Throws:</h5>
+
+        
+
+    <div class="param-desc">
+    
+        
+<span class="param-type"><code>external:validateParams.ValidationError</code></span>
+
+
+    
+    </div>
+
+
+    
+</div>
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>Promise</code></span>
+
+
+    </dd>
+</dl>
+
+
+    
+</div>
+
+
+
+</div>
+        
+    
 
     
 
@@ -251,7 +645,7 @@
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a> on Tue Jul 18 2017 17:16:54 GMT+0100 (IST) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a> on Thu Jul 20 2017 17:23:11 GMT+0100 (IST) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

@@ -4,7 +4,8 @@
 	},
 	"opts" : {
 		"destination" : "./docs",
-		"template": "./node_modules/@bbusschots/minami-bartificer"
+		"template": "./node_modules/@bbusschots/minami-bartificer",
+		"readme": "./README.md"
 	},
 	"templates" : {
 		"default" : {

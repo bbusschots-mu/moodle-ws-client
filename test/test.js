@@ -188,24 +188,43 @@ QUnit.test('class exists', function(a){
             // make sure arguments are properly saved into the constructed object
             var dummyOptions = {
                 acceptUntrustedTLSCert: true,
-                dataFormat: 'xml'
+                dataFormat: 'xml',
+                timeout: 10000
             };
             var m1 = new MoodleWSClient(dummyVal('url'), dummyVal('token'), dummyOptions);
-            a.equal(m1._baseURL, dummyVal('url'), 'Moodle base URL stored');
+            a.equal(m1._moodleUrl, dummyVal('url'), 'Moodle base URL stored');
             a.equal(m1._token, dummyVal('token'), 'webservice token stored');
             a.deepEqual(m1._options, dummyOptions, 'options stored');
             
             // check URL coercion
             var m2 = new MoodleWSClient('https://localhost', dummyVal('token'));
-            a.equal(m2._baseURL,'https://localhost/', 'trailing / coerced onto Moodle base URL');
+            a.equal(m2._moodleUrl,'https://localhost/', 'trailing / coerced onto Moodle base URL');
         });
         
         QUnit.test('options defaults', function(a){
-            a.expect(3);
+            a.expect(4);
             var m1 = new MoodleWSClient(dummyVal('url'), dummyVal('token'));
             a.ok(validate.isObject(m1._options), 'options created as object');
             a.strictEqual(m1._options.acceptUntrustedTLSCert, false, 'acceptUntrustedTLSCert defaults to false');
             a.strictEqual(m1._options.dataFormat, 'json', "dataFormat defaults to 'json'");
+            a.strictEqual(m1._options.timeout, 5000, "timeout defaults to 5,000ms");
+        });
+    });
+    
+    // NOTE
+    // ====
+    // Can't easily test any of the instance methods because they require access
+    // to a Moodle instnace, so these tests are very very basic.
+    QUnit.module('instance methods', {}, function(){
+        QUnit.test('.moodleUrl() instance method exists', function(a){
+            a.strictEqual(typeof MoodleWSClient.prototype.moodleUrl, 'function');
+        });
+        QUnit.test('.apiUrl() instance method exists', function(a){
+            a.strictEqual(typeof MoodleWSClient.prototype.apiUrl, 'function');
+        });
+        
+        QUnit.test('.submit() instance method exists', function(a){
+            a.strictEqual(typeof MoodleWSClient.prototype.submit, 'function');
         });
     });
 });

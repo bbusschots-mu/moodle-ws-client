@@ -226,5 +226,28 @@ QUnit.test('class exists', function(a){
         QUnit.test('.submit() instance method exists', function(a){
             a.strictEqual(typeof MoodleWSClient.prototype.submit, 'function');
         });
+        
+        QUnit.test('.registerShortcut() instance method', function(a){
+            a.expect(3);
+            a.strictEqual(typeof MoodleWSClient.prototype.registerShortcut, 'function', 'method exists');
+            var m1 = new MoodleWSClient(dummyVal('url'), dummyVal('token'));
+            var m2 = m1.registerShortcut('addUser', 'core_user_create_users', 'POST');
+            a.strictEqual(m1, m2, 'returns a reference to self');
+            a.strictEqual(typeof m1.addUser, 'function', 'shortcut function created');
+        });
+        
+        QUnit.test('.registerShortcuts() instance method', function(a){
+            a.expect(4);
+            a.strictEqual(typeof MoodleWSClient.prototype.registerShortcuts, 'function', 'method exists');
+            var m1 = new MoodleWSClient(dummyVal('url'), dummyVal('token'));
+            var scs = {
+                addUser: ['core_user_create_users', 'POST'],
+                deleteUser: ['core_user_delete_users', 'POST']
+            };
+            var m2 = m1.registerShortcuts(scs);
+            a.strictEqual(m1, m2, 'returns a reference to self');
+            a.strictEqual(typeof m1.addUser, 'function', '1st shortcut function created');
+            a.strictEqual(typeof m1.deleteUser, 'function', '2nd shortcut function created');
+        });
     });
 });

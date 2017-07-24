@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html">MoodleWSClient</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#submit">submit</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client.html">@maynoothuniversity/moodle-ws-client</a></span></li><li class="nav-heading">Externals</li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-validateParams.html">validateParams</a></span></li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-ValidateParamsConstraints.html">ValidateParamsConstraints</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html">MoodleWSClient</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#apiUrl">apiUrl</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#moodleUrl">moodleUrl</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#ping">ping</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#registerShortcut">registerShortcut</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#registerShortcuts">registerShortcuts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#submit">submit</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client.html">@maynoothuniversity/moodle-ws-client</a></span></li><li class="nav-heading">Externals</li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-moment.html">moment</a></span></li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-validateParams.html">validateParams</a></span></li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-ValidateParamsConstraints.html">ValidateParamsConstraints</a></span></li>
 </nav>
 
 <div id="main">
@@ -137,6 +137,12 @@ class.</p></div>
 
         <ul>
             <li>module:@maynoothuniversity/validate-params</li>
+        
+            <li>module:request</li>
+        
+            <li>module:request-promise-native</li>
+        
+            <li>module:moment</li>
         </ul>
     
 
@@ -163,6 +169,97 @@ class.</p></div>
         
                 
 <div class="section-members">
+<h4 class="name" id="~Duration"><span class="icon type-jsdoc">T</span>Duration</h4>
+
+
+
+
+<div class="description">
+    <p>A duration (length of time) represented as one of the following:</p>
+<ul>
+<li>a whole number of milliseconds greater than zero.</li>
+<li>a duration object as produced by the
+moment.duration() function representing a
+duration greater than 1 ms.</li>
+<li>a plain object or string that can be passed to the
+moment.duration() function and produces
+a duration object representing at least 1 ms of time.</li>
+</ul>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="http://momentjs.com/docs/#/durations/">http://momentjs.com/docs/#/durations/</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><code>string</code></span>
+|
+
+<span class="param-type"><code>PlainObject</code></span>
+|
+
+<span class="param-type"><code>Object</code></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</div>
+
+            
+                
+<div class="section-members">
 <h4 class="name" id="~HttpMethod"><span class="icon type-jsdoc">T</span>HttpMethod</h4>
 
 
@@ -170,6 +267,75 @@ class.</p></div>
 
 <div class="description">
     <p>A valid HTTP Method, e.g. <code>'GET'</code>.</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><code>string</code></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+</div>
+
+            
+                
+<div class="section-members">
+<h4 class="name" id="~JsFunctionName"><span class="icon type-jsdoc">T</span>JsFunctionName</h4>
+
+
+
+
+<div class="description">
+    <p>A valid JavaScript function name.</p>
 </div>
 
 
@@ -372,7 +538,7 @@ isPlainObject() function from validateParams.</p>
             
                 
 <div class="section-members">
-<h4 class="name" id="~SecureURL"><span class="icon type-jsdoc">T</span>SecureURL</h4>
+<h4 class="name" id="~SecureUrl"><span class="icon type-jsdoc">T</span>SecureUrl</h4>
 
 
 
@@ -516,13 +682,14 @@ isPlainObject() function from validateParams.</p>
             
                 
 <div class="section-members">
-<h4 class="name" id="~WSFunctionName"><span class="icon type-jsdoc">T</span>WSFunctionName</h4>
+<h4 class="name" id="~WsFunctionName"><span class="icon type-jsdoc">T</span>WsFunctionName</h4>
 
 
 
 
 <div class="description">
-    <p>A valid Moodle Web Service Function Name.</p>
+    <p>A valid Moodle Web Service Function Name. A string of lower-case letters and
+underscores.</p>
 </div>
 
 
@@ -598,7 +765,7 @@ isPlainObject() function from validateParams.</p>
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a> on Thu Jul 20 2017 17:23:11 GMT+0100 (IST) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a> on Mon Jul 24 2017 12:49:18 GMT+0100 (IST) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

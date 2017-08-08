@@ -253,7 +253,8 @@ QUnit.module('instance methods', {}, function(){
 });
 
 QUnit.test('.encodeWSArguments() static function', function(a){
-    a.expect(3);
+    a.expect(4);
+    a.deepEqual(MoodleWSClient.encodeWSArguments({ 'criteria[0][key]': 'deleted', 'criteria[0][value]': '0' }), { 'criteria[0][key]': 'deleted', 'criteria[0][value]': '0' }, 'already encoded object passes through un-changed');
     a.deepEqual(MoodleWSClient.encodeWSArguments({a: 'b'}), {a: 'b'}, 'un-nested object returns expected value');
     a.deepEqual(MoodleWSClient.encodeWSArguments({a: { b: 'c' }}), {'a[b]': 'c'}, 'nested object returns expected value');
     a.deepEqual(MoodleWSClient.encodeWSArguments({ criteria: [ { key: 'deleted', value: 0 } ] }), { 'criteria[0][key]': 'deleted', 'criteria[0][value]': '0' }, 'nested object containing array returns expected value');

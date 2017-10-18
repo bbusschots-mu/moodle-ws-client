@@ -6,3 +6,4 @@ docs-dev/
 
 # IDE Files
 *.komodoproject
+test/moodleDetails\.json

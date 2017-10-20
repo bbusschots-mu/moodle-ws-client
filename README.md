@@ -14,7 +14,7 @@ let myMoodle = new MoodleWSClient(
     '1234567890ABCDEF1234567890ABCDEF' // Web Service token
 );
 
-// submit a query to the web service (return a promise of the data)
+// submit a query to the web service (returns a promise of the data)
 myMoodle.submit(
     'GET', // HTTP method
     'core_webservice_get_site_info' // web service function name
@@ -22,3 +22,8 @@ myMoodle.submit(
     console.log(data);
 });
 ```
+
+## API Documentation
+
+Full API documentation available at
+[https://bbusschots-mu.github.io/moodle-ws-client/](https://bbusschots-mu.github.io/moodle-ws-client/).

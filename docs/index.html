@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html">MoodleWSClient</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#.encodeWSArguments">encodeWSArguments</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#apiUrl">apiUrl</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#moodleUrl">moodleUrl</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#ping">ping</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#registerShortcut">registerShortcut</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#registerShortcuts">registerShortcuts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html#submit">submit</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client.html">@maynoothuniversity/moodle-ws-client</a></span></li><li class="nav-heading">Externals</li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-moment.html">moment</a></span></li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-validateParams.html">validateParams</a></span></li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-ValidateParamsConstraints.html">ValidateParamsConstraints</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="MoodleWSClient.html">MoodleWSClient</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MoodleWSClient.html#.encodeWSArguments">encodeWSArguments</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MoodleWSClient.html#apiUrl">apiUrl</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MoodleWSClient.html#moodleUrl">moodleUrl</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MoodleWSClient.html#ping">ping</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MoodleWSClient.html#registerShortcut">registerShortcut</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MoodleWSClient.html#registerShortcuts">registerShortcuts</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MoodleWSClient.html#submit">submit</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="MoodleWSError.html">MoodleWSError</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MoodleWSError.html#responseData">responseData</a></span></li><li class="nav-heading">Modules</li><li class="nav-heading"><span class="nav-item-type type-module">M</span><span class="nav-item-name"><a href="module-@maynoothuniversity_moodle-ws-client.html">@maynoothuniversity/moodle-ws-client</a></span></li><li class="nav-heading">Externals</li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-moment.html">moment</a></span></li><li class="nav-heading"><span class="nav-item-type type-external">E</span><span class="nav-item-name"><a href="external-validateParams.html">validateParams</a></span></li><li class="nav-heading"><a href="global.html">Globals</a></li>
 </nav>
 
 <div id="main">
@@ -58,13 +58,14 @@ let myMoodle = new MoodleWSClient(
     '1234567890ABCDEF1234567890ABCDEF' // Web Service token
 );
 
-// submit a query to the web service (return a promise of the data)
+// submit a query to the web service (returns a promise of the data)
 myMoodle.submit(
     'GET', // HTTP method
     'core_webservice_get_site_info' // web service function name
 ).then(function(data){
     console.log(data);
-});</code></pre></article>
+});</code></pre><h2>API Documentation</h2><p>Full API documentation available at
+<a href="https://bbusschots-mu.github.io/moodle-ws-client/">https://bbusschots-mu.github.io/moodle-ws-client/</a>.</p></article>
     </section>
 
 
@@ -91,9 +92,8 @@ myMoodle.submit(
     
         
             <div class="description"><p>Provides the NodeJS module
-<a href="module-@maynoothuniversity_moodle-ws-client.html">moodle-ws-client</a>. The
-module is exported as the JavaScript prototype/class
-<a href="module-@maynoothuniversity_moodle-ws-client-MoodleWSClient.html">MoodleWSClient</a>.</p></div>
+<a href="module-@maynoothuniversity_moodle-ws-client.html">@maynoothuniversity/moodle-ws-client</a>.
+The module's export is the class <a href="MoodleWSClient.html">MoodleWSClient</a>.</p></div>
         
 
         
@@ -102,9 +102,6 @@ module is exported as the JavaScript prototype/class
 <dl class="details">
 
     
-    <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>0.0.3</li></ul></dd>
-    
 
     
 
@@ -121,13 +118,6 @@ module is exported as the JavaScript prototype/class
     
 
     
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li><a href="mailto:Bart.Busschots@mu.ie">Bart Busschots</a></li>
-        </ul>
-    </dd>
-    
 
     
 
@@ -139,13 +129,6 @@ module is exported as the JavaScript prototype/class
 
     
 
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li><a href="https://github.com/bbusschots-mu/moodle-ws-client">https://github.com/bbusschots-mu/moodle-ws-client</a></li>
-        </ul>
-    </dd>
     
 
     
@@ -185,7 +168,7 @@ module is exported as the JavaScript prototype/class
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a> on Tue Aug 08 2017 15:20:44 GMT+0100 (IST) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Oct 20 2017 16:37:29 GMT+0100 (IST) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>

@@ -234,7 +234,6 @@ QUnit.module('main exported class', {}, function(){
             // make sure arguments are properly saved into the constructed object
             var dummyOptions = {
                 acceptUntrustedTLSCert: true,
-                dataFormat: 'xml',
                 timeout: 10000
             };
             var m1 = new MoodleWSClient(dummyVal('url'), dummyVal('token'), dummyOptions);
@@ -248,11 +247,10 @@ QUnit.module('main exported class', {}, function(){
         });
         
         QUnit.test('options defaults', function(a){
-            a.expect(4);
+            a.expect(3);
             var m1 = new MoodleWSClient(dummyVal('url'), dummyVal('token'));
             a.ok(validate.isObject(m1._options), 'options created as object');
             a.strictEqual(m1._options.acceptUntrustedTLSCert, false, 'acceptUntrustedTLSCert defaults to false');
-            a.strictEqual(m1._options.dataFormat, 'json', "dataFormat defaults to 'json'");
             a.strictEqual(m1._options.timeout, 5000, "timeout defaults to 5,000ms");
         });
     });

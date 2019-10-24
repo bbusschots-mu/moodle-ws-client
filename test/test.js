@@ -296,11 +296,13 @@ QUnit.module('main exported class', {}, function(){
     });
     
     QUnit.test('.encodeWSArguments() static function', function(a){
-        a.expect(4);
+        a.expect(6);
         a.deepEqual(MoodleWSClient.encodeWSArguments({ 'criteria[0][key]': 'deleted', 'criteria[0][value]': '0' }), { 'criteria[0][key]': 'deleted', 'criteria[0][value]': '0' }, 'already encoded object passes through un-changed');
         a.deepEqual(MoodleWSClient.encodeWSArguments({a: 'b'}), {a: 'b'}, 'un-nested object returns expected value');
         a.deepEqual(MoodleWSClient.encodeWSArguments({a: { b: 'c' }}), {'a[b]': 'c'}, 'nested object returns expected value');
         a.deepEqual(MoodleWSClient.encodeWSArguments({ criteria: [ { key: 'deleted', value: 0 } ] }), { 'criteria[0][key]': 'deleted', 'criteria[0][value]': '0' }, 'nested object containing array returns expected value');
+		a.deepEqual(MoodleWSClient.encodeWSArguments({ criteria: [ { key: 'deleted', value: true } ] }), { 'criteria[0][key]': 'deleted', 'criteria[0][value]': '1' }, "true converted to '1'");
+		a.deepEqual(MoodleWSClient.encodeWSArguments({ criteria: [ { key: 'deleted', value: false } ] }), { 'criteria[0][key]': 'deleted', 'criteria[0][value]': '0' }, "false converted to '0'");
     });
 });
 

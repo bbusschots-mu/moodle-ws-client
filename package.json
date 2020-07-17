@@ -1,6 +1,6 @@
 {
   "name": "@maynoothuniversity/moodle-ws-client",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A Moodle Web Services Client",
   "main": "lib/moodleWSClient.js",
   "scripts": {
@@ -26,15 +26,15 @@
   "homepage": "https://github.com/bbusschots-mu/moodle-ws-client#readme",
   "dependencies": {
     "@maynoothuniversity/validate-params": "^1.2.3",
-    "moment": "^2.24.0",
-    "request": "^2.88.0",
+    "moment": "^2.27.0",
+    "request": "^2.88.2",
     "request-promise-native": "^1.0.8"
   },
   "devDependencies": {
     "@bbusschots/minami-bartificer": "^1.2.3",
-    "fs-extra": "^8.1.0",
-    "jsdoc": "^3.6.3",
+    "fs-extra": "^9.0.1",
+    "jsdoc": "^3.6.4",
     "qunitjs": "^2.4.1",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.4"
   }
 }
